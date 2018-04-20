@@ -1,0 +1,26 @@
+<p>
+  show works!
+</p>
+
+
+<a routerLink="">Home</a>
+<!-- <a routerLink="/write/{{author._id}}">Add a quote</a> -->
+
+<p *ngIf="errFlag" style="color:red;">{{error}}</p>
+
+<p>Details about: {{user.name}}</p>
+
+
+      <p>ID: {{user._id}}</p>
+      <p>Name: {{user.name}}</p>
+      <p>Pet Type: {{user.type}}</p>
+      <p>Description: {{user.desc}}</p>
+      <p>Skills: </p>
+      <p>{{user.skill1}}</p>
+      <p>{{user.skill2}}</p>
+      <p>{{user.skill3}}</p>
+      <p>Likes: {{user.likes}}</p>
+      <!-- <button (click)="voteUp(user._id)" >Like this pet</button>  -->
+      <button (click)="voteUp(user._id)" disabled="{{flagVariable}}">Like this pet</button> 
+      <button (click)="onDelete(user._id)" >Adopt this pet</button>
+     

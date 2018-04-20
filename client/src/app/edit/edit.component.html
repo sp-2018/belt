@@ -1,0 +1,32 @@
+<p>
+  edit works!
+</p>
+
+
+<a routerLink="">Home</a>
+
+<p *ngIf="errFlag" style="color:red;">{{error}}</p>
+
+<p>Edit this pet:</p>>
+<form  (submit)="onSubmitEdit(oneUser._id)">
+  <p> {{ oneUser | json }} </p>
+  <p>Pet Name:</p>
+  <input type="text" name="oneUser.name" [(ngModel)]="oneUser.name" />
+
+  <p> Pet Type:</p>
+  <input type="text" name="oneUser.type" [(ngModel)]="oneUser.type" />
+  <p> Pet Description:</p>
+  <input type="text" name="oneUser.desc" [(ngModel)]="oneUser.desc" />
+  <p> Skills:</p>
+  <p> Skill 1:</p>
+  <input type="text" name="oneUser.skill1" [(ngModel)]="oneUser.skill1" />
+  <p> Skill 2:</p>
+  <input type="text" name="oneUser.skill2" [(ngModel)]="oneUser.skill2" />
+  <p> Skill 3:</p>
+  <input type="text" name="oneUser.skill3" [(ngModel)]="oneUser.skill3" />
+
+
+
+  <input type="submit" value="Submit" />
+  <button [routerLink]="['/list']">Cancel</button>
+</form>

@@ -1,0 +1,40 @@
+<p>
+  list works!
+</p>
+
+<h3>These pets are looking for a home!</h3>
+<a routerLink="/new">Add a pet to a shelter</a>
+
+<p *ngIf="errFlag" style="color:red;">{{error}}</p>
+
+<!-- <p>We have quotes by:</p> -->
+
+<table>
+  <thead>
+    <tr>
+      <!-- <th>ID</th> -->
+      <th>Name</th>
+      <th>Type</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <div *ngFor="let user of users">
+      <tr>
+      <!-- <td>ID: {{user._id}}</td> -->
+      <td>{{user.name}}</td>
+      <td>{{user.type}}</td>
+      <td>
+        <button (click)="viewUser(user._id)" >Details</button>
+        <button (click)="onEdit(user._id)" >Edit</button>
+        <!-- <button (click)="onDelete(author._id)" >Delete</button> -->
+      </td>
+    </tr>
+    </div>
+
+  </tbody>
+
+</table>
+<!-- <p id="atag"><a href="/users/new">Add a new user</a></p> -->
+

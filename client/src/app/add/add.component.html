@@ -1,0 +1,32 @@
+<!-- <p>
+  add works!
+</p> -->
+
+
+<!-- <a routerLink="/list">Home</a> -->
+
+<p *ngIf="errFlag" style="color:red;">{{error}}</p>
+
+<h2> Know of a pet needing a home?</h2>
+
+<p style="color:#823dd6;">  The pet must have a name</p>
+
+<form (submit)="onSubmit()">     
+<!--   <p> {{ newUser | json }} </p> -->
+  <p> Pet Name:</p>
+  <input type="text" name="newUser.name" [(ngModel)]="newUser.name" />
+  <p> Pet Type:</p>
+  <input type="text" name="newUser.type" [(ngModel)]="newUser.type" />
+  <p> Pet Description:</p>
+  <input type="text" name="newUser.desc" [(ngModel)]="newUser.desc" />
+  <p> Skills:</p>
+  <p> Skill 1:</p>
+  <input type="text" name="newUser.skill1" [(ngModel)]="newUser.skill1" />
+  <p> Skill 2:</p>
+  <input type="text" name="newUser.skill2" [(ngModel)]="newUser.skill2" />
+  <p> Skill 3:</p>
+  <input type="text" name="newUser.skill3" [(ngModel)]="newUser.skill3" />
+
+  <input type="submit" value="Add Pet" />
+  <button [routerLink]="['']">Cancel</button>
+</form>

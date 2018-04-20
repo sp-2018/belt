@@ -1,0 +1,19 @@
+<p>
+  edit2 works!
+</p>
+
+
+<a routerLink="/list">Home</a>
+
+<p *ngIf="errFlag" style="color:red;">{{error}}</p>
+
+<p>Provide a quote by {{author.name}}:</p>
+<p>A quote must contain atleast 3 characters!</p>
+
+<form (submit)="onSubmit()">     
+  <p> {{ newQuote | json }} </p>
+  <p> Quote:</p>
+  <input type="text" name="newQuote.quote" [(ngModel)]="newQuote.quote" />
+  <input type="submit" value="Submit" />
+  <button [routerLink]="['/list']">Cancel</button>
+</form>
